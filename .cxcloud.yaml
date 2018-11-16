@@ -1,0 +1,11 @@
+deployment:
+  name: $APP_NAME
+  image:
+    name: $APP_NAME
+    repository: 307365680736.dkr.ecr.eu-west-1.amazonaws.com/cluster.cxcloud.com
+    version: $APP_VERSION
+  containerPort: 80
+  replicas: 2
+  env:
+    - name: NODE_ENV
+      value: production
